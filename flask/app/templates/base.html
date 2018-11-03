@@ -1,5 +1,23 @@
-<div>
-    Microblog:
-    <a href="/index">Home</a>
-    <a href="/login">Login</a>
-</div>
+<html>
+
+<head>
+    {% if title %}
+    <title>{{ title }} - Icebreaker</title>
+    {% else %}
+    <title>Welcome to Icebreaker</title>
+    {% endif %}
+</head>
+
+<body>
+    <div>
+        Icebreaker:
+        <a href="/index">Home</a>
+        <a href="/login">Login</a>
+    </div>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+
+
+
+</html>
