@@ -41,5 +41,3 @@ def subtract_1(): #subtracts one from counter (also doesn't display counter)
 
 @app.route('/login/signinUser', methods=['POST'])
 def signinUser():
-        
-
