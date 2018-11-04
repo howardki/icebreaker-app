@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>Icebreaker</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="../static/main.css" />
+</head>
+
+<body>
+	<div id="main">
+		<button id="add">Add 1</button>
+		<button id="subtract">Subtract 1</button>
+		<br />
+		<p id="number"></p>
+	</div>
+	<div id="logs">
+		<div id="requests">
+			<div id="requests-title">
+				Requests:
+			</div>
+			<div id="requests-content">
+			</div>
+		</div>
+		<div id="responses">
+			<div id="responses-title">
+				Responses:
+			</div>
+			<div id="responses-content">
+			</div>
+		</div>
+	</div>
+
+	<script src="../static/baseurl.js"></script>
+	<script src="../static/main.js"></script>
+</body>
+
+</html>
+{% endblock %}
