@@ -40,4 +40,18 @@ def subtract_1(): #subtracts one from counter (also doesn't display counter)
         return '', 200
 
 @app.route('/login/signinUser', methods=['POST'])
-def signinUser():
+def add_user():
+        if form.validate_on_submit():
+                print("i've hit form.validate_on_submit")
+                c = Classroom.query.filter_by(id=int(form.password.data)).first()
+                if c is None:
+                        flash('Invalid class ID.')
+                        return redirect(url_for('login'))
+        # login_user(user, remember=form.remember_me.data)
+                return redirect(url_for('index'))
+        else:
+                return render_template('login.html', title='Sign In', form=form)
+    # console.log("loading login")
+
+
+    
